@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "py-ai-commits"
+version = "0.1.0"
+description = "A tool that writes commits based on your changes"
+authors = ["Sebastian Kucharzyk <kucharzyk.sebastian@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "py_ai_commits"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
