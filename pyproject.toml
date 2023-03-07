@@ -11,6 +11,26 @@ packages = [{include = "py_ai_commits"}]
 python = "^3.8"
 
 
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.1.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+py_version = 38
+profile = "black"
+force_single_line = true
+combine_as_imports = true
+lines_between_types = 1
+lines_after_imports = 2
+src_paths = ["py_ai_commits", "tests"]
+
+
+[tool.black]
+target-version = ['py38']
+preview = true
+force-exclude = '''
+.*/setup\.py$
+'''
